@@ -20,7 +20,7 @@ While python comes with the library smtplib and ssl preinstalled. You can instal
 
 
 
-2.Scanner
+2.Sniff_Tool
 
 
 These are basic scanners.
@@ -57,3 +57,33 @@ OUTPUT :
 {'ip': '192.168.1.2', ' mac': '6c:56:97:b0:fe:b3'}
 
 {'ip': '192.168.1.26', ' mac': '28:6c:07:8c:96:f5'}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.Stegnography
+
+Python script implements image steganography using the stegano library. It allows users to embed or extract secret messages within PNG image files, optionally protected by a password. The script uses the Least Significant Bit (LSB) method, which hides data in the least significant bits of the image's pixel values.​
+
+How the Code Works
+The script uses argparse to handle command-line arguments for embedding (-e), extracting (-x), specifying the image file (-f), and adding a password (-p).​
+
+For embedding: The password and message are concatenated and hidden in the image using lsb.hide(). The resulting image is saved with a random filename.​
+
+For extracting: The script reads the hidden message from the image with lsb.reveal(). If a password was used, it checks if the message starts with the password, then removes it to reveal the actual message.​
+
+The script includes error handling for missing files, invalid arguments, and keyboard interrupts.​
+
+Practical Procedure
+
+i) Setup
+Install the required library:
+pip install stegano
+
+Embedding a Message
+Run the script from the terminal:
+python stego.py -f <your_image.png> -e "<your_secret_message>" -p your_password
+
+Extracting a Message
+To extract the message, use:
+python stego.py -f secret42.png -x -p your_password
+If the password matches, the script will print the hidden message.
