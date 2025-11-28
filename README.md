@@ -21,6 +21,8 @@ While python comes with the library smtplib and ssl preinstalled. You can instal
 
 
 2.Scanner
+
+
 These are basic scanners.
 
 They can check the number of devices connected to your network and print their local IP addresses along with their MAC addresses.
