@@ -18,7 +18,7 @@ You need to have pynput , smtplib and ssl installed.
 
 While python comes with the library smtplib and ssl preinstalled. You can install pynput with : pip install pynput
 
-
+===========================================================================================================================================================================================
 
 2.Sniff_Tool
 
@@ -73,17 +73,23 @@ For extracting: The script reads the hidden message from the image with lsb.reve
 
 The script includes error handling for missing files, invalid arguments, and keyboard interrupts.​
 
+
 Practical Procedure
 
-i) Setup
+ Setup
 Install the required library:
+
 pip install stegano
 
 Embedding a Message
+
 Run the script from the terminal:
+
 python stego.py -f <your_image.png> -e "<your_secret_message>" -p your_password
 
 Extracting a Message
 To extract the message, use:
+
 python stego.py -f secret42.png -x -p your_password
+
 If the password matches, the script will print the hidden message.
