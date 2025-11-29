@@ -62,3 +62,6 @@ except FileNotFoundError:
 
 except KeyboardInterrupt:
     print("[-]Keyboard Interrupt.")
+
+# Embedding msg => python stego.py -f your_image.png -e "your_secret_message" -p your_password
+# Extracting msg => python stego.py -f <extact.png> -x -p your_password
