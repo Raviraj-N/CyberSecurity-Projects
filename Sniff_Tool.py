@@ -30,3 +30,5 @@ else:
         results.append(clients)
     for i in range(len(results)):
         print(results[i])
+
+#  command for run => python Sniff_Tool.py -ip <Your_Ip address>
